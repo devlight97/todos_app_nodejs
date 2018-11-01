@@ -1,0 +1,99 @@
+*{margin: 0; padding: 0;}
+
+.images img {
+    width: 100%;
+}
+
+.images input {
+    width: 85%;
+    margin-left: 1px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.images button {
+    
+text-align: center;
+    
+margin-bottom: 12px;
+    
+font-size: 14px;
+    
+border: 2px solid #415366;
+    
+color: #273b4e;
+}
+
+#task {width: 98%;margin-top: 15px;margin-left: 1%;border: 1px solid #80808033;padding: 5px;}
+
+.images {
+    
+border: 3px solid #4cbc88;
+    
+padding: 10px;
+}
+
+.list-group-item button {
+    
+float: left;
+    
+width: 25px;
+    
+cursor: pointer;
+    
+border: 0;
+    
+background: none;
+    
+color: #e80707;
+    
+font-weight: bold;
+    
+margin: 0;
+}
+
+#task-manager ol {
+    
+overflow-y: scroll;
+    
+height: 300px;
+}
+
+#task-manager li {
+    
+color: #273b4e;
+    
+margin: 1px 0;
+    
+cursor: pointer;
+}
+
+.my-btn-success {
+    
+background: #4cbc88;
+}
+
+#task-manager h3 {
+    
+color: #273b4e;
+}
+
+.el-picked {
+    border: 2px solid #4cbc88;
+    transition: 0.4s;
+}
+
+#task-manager ol li p {
+    
+width: 93%;
+    
+float: left;
+    
+margin: 0;
+    
+overflow: auto;
+}
+
+#task-manager ol li p:hover {
+    color: #4cbc88;
+}

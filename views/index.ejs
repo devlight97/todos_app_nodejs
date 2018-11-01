@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todos</title>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="/assets/css/bootstrap.css">
+        <link type="text/css" rel="stylesheet" href="/assets/css/style.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div id="wrap">
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="images col-lg-6">
+                        <img src="/assets/pictures/vuelogo.png" alt="">
+                        <div id="task-manager">
+                            <h3>Công việc chưa hoàn thành ({{ tasks.length }})</h3>
+                            <ol class="list-group">
+                                <li v-for="(task,index) in tasks" v-on:dblclick="pickTask(index)" class="list-group-item">
+                                    <p v-on:click="swapTaskByMouse(index)">({{ index + 1 }}) {{ task.content }}</p>
+                                    <button v-on:click="removeTask(task)">&#10007</button>
+                                </li>
+                            </ol>
+                            <input v-on:keyup.enter="handlingTask" v-on:keyup = "updateFromKeyBoard" type="text" v-model="newTask" placeholder="Nhập công việc...">
+                            <button type="submit" v-on:click="handlingTask" class="btn my-btn-success">{{ nameButton }}</button>
+                            <p style="color:#0069d9;" v-if="checkState==='add-success'">Thêm Task thành công ^^</p>
+                            <p style="color:red;" v-else-if="checkState==='add-fail'">Bạn phải nhập công việc trước khi "Thêm" !!</p>
+                            <p style="color:#0069d9;" v-if="checkState==='update-success'">Sửa thành công ^^</p>
+                            <p style="color:red;" v-else-if="checkState==='delete-ask'">Bạn muốn xóa công việc ??</p>
+                            <p style="color:red;" v-else-if="checkState==='delete-success'">Đã xóa !!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="/assets/js/app.js"></script>
+        <script type="text/javascript" src="/assets/js/vue.js"></script>
+        <script type="text/javascript" src="/assets/js/jquery-1.12.4.js"></script>
+    </body>
+</html>
